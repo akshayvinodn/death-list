@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+	Bonativo by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/kutan.css' %}">
+<link rel="stylesheet" href="{% static 'css/prettyPhotocss' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>peoples of india</title>
+
+        <!-- Bootstrap -->
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/kuttan.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'icons/css/ionicons.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+       
+        <!--revolution slider setting css-->
+        <link href="rs-plugin/css/settings.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar- before-color" style="background-color:rgb(75, 67, 121);" >
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand alo" href="add_to_living.html">DEATH LIST</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right scroll-to">
+                        <li class="active"><a href="{% url 'member:index' %}">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Service <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-dark" role="menu" aria-labelledby="dropdownMenuButton2">
+                                <li class="dropdown-item active"><a href="{% url 'member:add_to_living' %}">Add to Living list</a></li>
+                                 <li class="dropdown-item"><a href="{% url 'member:add_to_death' %}">Add to Death list</a></li>
+
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="post-single.html">Blog Post</a></li>                      
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Table <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-dark" role="menu" aria-labelledby="dropdownMenuButton2">
+                               <li class="dropdown-item active" ><a href="{% url 'member:death_list' %}">Death list table</a></li>
+                               <li class="dropdown-item"><a href="{% url 'member:living_list' %}">Living list table</a></li>
+
+                                
+                            </ul>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        {% block content %}
+        {% endblock content %}
+       <footer class="footer" style="background-color:rgb(75, 67, 121)" >
+            <div class="container text-center", >
+                <span class="alo">DIVIDE AND CONQUER</span>
+                <ul class="social list-inline">
+                    <li><a href="#"><i class="icon icon-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon icon-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon icon-social-dribbble"></i></a></li>
+                </ul>
+                <span class="copyright">&copy; Copyright 2021. Divide And Conquer Created By <a href="http://templatestock.co">Template Stock</a></span>
+            </div>
+        </footer>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+        <!-- bootstrap js-->
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/parallax.min.js' %}"></script> 
+        <script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>	       
+        <script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+        <!--revolution slider scripts-->
+        <script src="{% static 'rs-plugin/js/jquery.themepunch.tools.min.js' %}" type="text/javascript"></script>
+        <script src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}" type="text/javascript"></script>  
+        <script src="{% static 'js/template.js' %}" type="text/javascript"></script>
+
+    </body>
+</html>
